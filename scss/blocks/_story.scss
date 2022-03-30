@@ -1,0 +1,311 @@
+.choose{
+  margin-top: 50px;
+}
+
+.choose__list{
+  @include list-style;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.choose__item{
+  &:not(:last-child){
+    margin-right: 50px;
+  }
+}
+
+.choose__btn{
+  border: none;
+  background-color: transparent;
+}
+
+.story__list{
+  @include list-style;
+  display: flex;
+}
+
+.story__item{
+  cursor: pointer;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover{
+    .story__info{
+      display: flex !important;
+    }
+
+    .story__box-shadow{
+      width: 92%;
+      height: 92%;
+    }
+
+    .video-holder{
+      .bx{
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.story__item-holder{
+  padding: 14px;
+
+  img{
+    width: 100%;
+    height: 100%;
+    min-height: 293px;
+  }
+}
+
+.story__info{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none !important;
+}
+
+.story__info-num{
+  color: #fff;
+  font-size: 20px;
+
+  &:first-child{
+    margin-right: 30px;
+  }
+
+  .bx{
+    margin-right: 5px;
+  }
+}
+
+.story__box-shadow{
+  width: 0;
+  height: 0;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+.bx-play{
+  font-size: 30px;
+}
+
+.video-holder{
+  .bx{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+  }
+}
+
+.video-holder{
+  .bx{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+  }
+}
+
+.modal-content{
+  border-radius: 0;
+}
+
+.modal-dialog{
+  height: 100%;
+  max-height: 80vh;
+  max-width: 85vw;
+}
+
+.btn-close{
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background-image: none;
+  color: #fff !important;
+  font-size: 50px;
+  opacity: 1 !important;
+}
+
+.modal-intro{
+  padding: 14px;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-img-holder{
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+
+  img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modal-img-holder-two{
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+
+  img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modal-owner{
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.modal-dot{
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.follow{
+  font-weight: normal;
+}
+
+.three-dot-btn{
+  border: none;
+  background-color: transparent;
+  
+  .bx{
+    font-size: 20px;
+  }
+}
+
+.modal-main-body{
+  padding: 14px;
+  padding-right: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-real-title{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  .modal-owner{
+    margin-right: 0;
+  }
+}
+
+.modal-inner-body{
+  &::-webkit-scrollbar{
+    width: 0;
+  }
+
+  font-size: 14px;
+  height: 45vh;
+  overflow-y: auto;
+}
+
+.modal-main-footer{
+  padding: 14px;
+  border-bottom: 1px solid #ccc;
+}
+
+.three-btn{
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+}
+
+.bookmark-btn{
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+}
+
+.number-like{
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.time-publish{
+  font-size: 12px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.form-modal{
+  padding: 14px;
+}
+
+.smile{
+  .bx{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  margin-right: 15px;
+}
+
+.modal-input{
+  border: none;
+  background-color: transparent;
+
+  &::placeholder{
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+.post-btn{
+  border: none;
+  background-color: transparent;
+  color: rgba(0, 0, 255, 0.459);
+}
+
+.modal-media-holder{
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.story__item-holder{
+  width: 100%;
+  height: 100%;
+  
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.element-video{
+  background-color: #000;
+}
+
+.saved-list{
+  @include list-style;
+  display: none;
+}
