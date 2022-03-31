@@ -1,7 +1,6 @@
 // CREATING THE STORIES IN THE OBJECT
 
 const elStoryList = document.querySelector(".story__list");
-
 let a = 0;
 function showIt(elStories, num){
   elStories.forEach((el, index) => {
@@ -161,6 +160,7 @@ function showIt(elStories, num){
         elHeart.className = "bx bxs-heart";
         elHeart.style.color = "red";
       });
+      elStoryList.appendChild(elItem);
     } else if(num == 2){
       elSavedList.appendChild(elItem);
       if(el.save == true){
@@ -168,6 +168,7 @@ function showIt(elStories, num){
         elHeart.className = "bx bxs-heart";
         elHeart.style.color = "red";
       }
+      elSavedList.appendChild(elItem);
     }
   });
 }
