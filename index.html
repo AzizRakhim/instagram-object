@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Document</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" type="image/png">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -15,26 +16,222 @@
 </head>
 
 <body>
+    <section id="hero" class="hero">
+        <header class="header">
+            <div class="container d-flex align-items-center">
+                <div class="header__logo-holder">
+                    <a class="header__logo-link" href="#">
+                        <img src="media/logo.png" alt="instagram-logo">
+                    </a>
+                </div>
+                <form class="header__form">
+                    <div class="header__search-holder">
+                        <i class='bx bx-search'></i>
+                        <input type="text" class="header__input" name="search" placeholder="Search">
+                    </div>
+                </form>
+                <div class="header__btn-holder">
+                    <ul class="header__list d-flex align-items-center">
+                        <li class="header__item">
+                            <button class="header__btn d-flex align-items-center">
+                                <i class='bx bxs-home'></i>
+                            </button>
+                        </li>
+                        <li class="header__item">
+                            <button class="header__btn d-flex align-items-center">
+                                <i class='bx bxl-messenger'></i>
+                            </button>
+                        </li>
+                        <li class="header__item">
+                            <button class="header__btn d-flex align-items-center">
+                                <i class='bx bxs-plus-square'></i>
+                            </button>
+                        </li>
+                        <li class="header__item">
+                            <button class="header__btn d-flex align-items-center">
+                                <i class='bx bxs-compass'></i>
+                            </button>
+                        </li>
+                        <li class="header__item">
+                            <button class="header__btn d-flex align-items-center">
+                                <i class='bx bx-heart'></i>
+                            </button>
+                        </li>
+                        <li class="header__item">
+                            <button class="header__btn d-flex align-items-center">
+                                <img src="media/menu-button.png" alt="profile-icon">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="hero-intro">
+            <div class="container">
+                <div class="hero__container d-flex align-items-center">
+                    <div class="hero__img-holder">
+                        <button class="hero__img-button">
+                            <img src="media/profile-pic.png" alt="profile">
+                        </button>
+                    </div>
+                    <div class="hero__info">
+                        <div class="hero__name d-flex align-items-center">
+                            <span class="hero__real-name">
+                                terrylucas
+                            </span>
+                            <button class="hero__follow-btn">
+                                Follow
+                            </button>
+                            <button class="hero__dots d-flex align-items-center">
+                                <i class='bx bx-dots-horizontal-rounded'></i>
+                            </button>
+                        </div>
+                        <div class="hero__followers">
+                            <span class="hero__posts">
+                                <span class="hero__num">
+                                    1.258
+                                </span>
+                                posts
+                            </span>
+                            <span class="hero__posts">
+                                <span class="hero__num">
+                                    4M 
+                                </span>
+                                followers
+                            </span>
+                            <span class="hero__posts">
+                                <span class="hero__num">
+                                    1.250 
+                                </span>
+                                following
+                            </span>
+                        </div>
+                        <div class="hero__full-name">
+                            Terry Lucas
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__slider position-relative">
+                    <ul class="hero__slider-list d-flex align-items-center">
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small.png" alt="profile">
+                                Made Us
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-two.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-three.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-four.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-two.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-three.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-four.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-two.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-three.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                        <li class="hero__slider-item">
+                            <button class="hero__slider-btn">
+                                <img src="media/profile-pic-small-four.png" alt="profile">
+                                Lorem...
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="hero__slider-btn-holder">
+                        <button class="hero__arrow-btn" id="left" type="button">
+                            <i class='bx bx-chevron-left'></i>
+                        </button>
+                    </div>
+                    <div class="hero__slider-btn-holder">
+                        <button class="hero__arrow-btn" id="right" type="button">
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="choose">
         <div class="container">
             <ul class="choose__list d-flex">
-                <li class="choose__item">
-                    <button class="choose__btn post">
+                <li class="choose__item active">
+                    <button class="d-flex align-items-center active choose__btn post">
+                        <i class='bx bx-grid'></i>
                         POSTS
                     </button>
                 </li>
                 <li class="choose__item">
-                    <button class="choose__btn">
+                    <button class="d-flex align-items-center choose__btn">
+                        <i class='bx bx-book-content'></i>
                         GUIDES
                     </button>
                 </li>
                 <li class="choose__item">
-                    <button class="choose__btn">
+                    <button class="d-flex align-items-center choose__btn">
+                        <i class='bx bx-movie-play'></i>
+                        REELS
+                    </button>
+                </li>
+                <li class="choose__item">
+                    <button class="d-flex align-items-center choose__btn">
+                        <i class='bx bx-play-circle' ></i>
                         VIDEOS
                     </button>
                 </li>
                 <li class="choose__item">
-                    <button class="choose__btn saved">
+                    <button class="d-flex align-items-center choose__btn saved">
+                        <i class='bx bx-user-pin'></i>
                         SAVED
                     </button>
                 </li>

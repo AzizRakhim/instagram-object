@@ -2,12 +2,13 @@
 
 const elStoryList = document.querySelector(".story__list");
 let a = 0;
+let b = 0;
 function showIt(elStories, num){
   elStories.forEach((el, index) => {
     let elItem = document.createElement("li");
     elItem.className = "story__item col-4";
     elItem.setAttribute("data-bs-toggle", "modal");
-    elItem.setAttribute("data-bs-target", `#staticBackdrop${a}`);
+    elItem.setAttribute("data-bs-target", `#exampleModal${a}`);
     elItem.innerHTML = `
       <div class="story__item-holder">
         <img src="${el.media[0]}" alt="random">
@@ -29,13 +30,16 @@ function showIt(elStories, num){
   
     let elModalHolder = document.createElement("div");
     elModalHolder.innerHTML = `
-      <div class="modal fade" id="staticBackdrop${a}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal${a}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">
               <i class='bx bx-x'></i>
             </button>
             <div class="modal-body d-flex p-0">
+              <div class="everything-holder col-6">
+
+              </div>
               <div class="modal-media-holder col-6">
                 <img src="${el.media[0]}" alt="${el.title}">
               </div>
@@ -84,7 +88,7 @@ function showIt(elStories, num){
                 <div class="modal-main-footer">
                   <div class="modal-buttons-holder d-flex align-items-center justify-content-between">
                     <div class="three-btns">
-                      <button class="three-btn" onclick="save(${el.id})">
+                      <button class="three-btn">
                         <i class='bx bx-heart' ></i>
                       </button>
                       <button class="three-btn">
@@ -95,7 +99,7 @@ function showIt(elStories, num){
                       </button>
                     </div>
                     <div class="bookmark">
-                      <button class="bookmark-btn">
+                      <button class="bookmark-btn" onclick="save(${el.id})">
                         <i class='bx bx-bookmark'></i>
                       </button>
                     </div>
@@ -130,7 +134,7 @@ function showIt(elStories, num){
   
     const elModalKeep = document.querySelector(".modal-container");
     elModalKeep.appendChild(elModalHolder);
-  
+       
     el.media.forEach((item) => {
       if(item.includes("mp4")){
         let elVideo = elItem.querySelector(".bxs-heart");
@@ -151,23 +155,67 @@ function showIt(elStories, num){
             </source>
           </video>
         `;
-      } 
+      } else if(el.media.length > 1){
+        let elImg = elModalHolder.querySelector(".modal-media-holder");
+        elImg.innerHTML = `
+        <div id="carouselExampleControls${b}" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="${el.media[0]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[1]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[2]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[3]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[4]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[5]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[6]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[7]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[8]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+            <div class="carousel-item">
+              <img src="${el.media[9]}" class="d-block w-100 h-100" alt="${el.title}">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls${b}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls${b}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        `;
+        b++;
+      }
     });
 
     if(num == 1){
-      let elHeart = elModalHolder.querySelector(".bx-heart");
-      elHeart.addEventListener("click", () => {
-        elHeart.className = "bx bxs-heart";
-        elHeart.style.color = "red";
+      let elBookmark = elModalHolder.querySelector(".bx-bookmark");
+      elBookmark.addEventListener("click", () => {
+        elBookmark.className = "bx bxs-bookmark";
+        elBookmark.style.color = "black";
       });
       elStoryList.appendChild(elItem);
     } else if(num == 2){
-      elSavedList.appendChild(elItem);
-      if(el.save == true){
-        let elHeart = elModalHolder.querySelector(".bx-heart");
-        elHeart.className = "bx bxs-heart";
-        elHeart.style.color = "red";
-      }
+      let elBookmark = elModalHolder.querySelector(".bx-bookmark");
+      elBookmark.className = "bx bxs-bookmark";
+      elBookmark.style.color = "black";
       elSavedList.appendChild(elItem);
     }
   });
@@ -178,13 +226,11 @@ showIt(elStories, 1);
 // SAVING THE SELECTED STORIES
 
 let elSavedThings = [];
-let elRemoveHelper = [];
 
 function save(idx){
   elStories.forEach((el) => {
     if(el.id == idx){
       elSavedThings.push(el);
-      el.save = true;
     }
   });
 
@@ -200,7 +246,6 @@ function save(idx){
     });
     elSavedList.innerHTML = "";
     showIt(elArryReal, 2);
-    elRemoveHelper = elArryReal;
   });
 }
 
@@ -212,10 +257,43 @@ const elSavedList = document.querySelector(".saved-list");
 
 elSavedBtn.addEventListener("click", () => {
   elStoryList.style.display = "none";
-  elSavedList.style.display = "flex"
+  elSavedList.style.display = "flex";
+  elPost.classList.remove("active");
+  elSavedBtn.classList.add("active");
 });
 
 elPost.addEventListener("click", () => {
   elStoryList.style.display = "flex";
   elSavedList.style.display = "none";
+  elPost.classList.add("active");
+  elSavedBtn.classList.remove("active");
 });
+
+// WORKING WITH THE HERO SLIDE
+
+let elHeroLeft = document.querySelector("#left");
+let elHeroRight = document.querySelector("#right");
+let elHeroList = document.querySelector(".hero__slider-list");
+let keepCount = 0;
+let elImgLength = elHeroList.querySelectorAll("li");
+
+elHeroLeft.addEventListener("click", () => {
+  keepCount--;
+
+  moveIt();
+});
+
+elHeroRight.addEventListener("click", () => {
+  keepCount++;
+
+  moveIt();
+});
+
+function moveIt() {
+  if(keepCount > elImgLength.length - 7){
+    keepCount = 0;
+  } else if(keepCount < 0){
+    keepCount = elImgLength.length - 7;
+  }
+  elHeroList.style.transform = `translateX(${-keepCount * 127}px)`;
+}

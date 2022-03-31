@@ -1,13 +1,7 @@
-.choose{
-  margin-top: 50px;
-}
-
 .choose__list{
   @include list-style;
   justify-content: center;
-  border-top: 1px solid #ccc;
-  padding: 20px;
-  padding-bottom: 10px;
+  border-top: 1px solid #dbdbdb;
 }
 
 .choose__item{
@@ -19,6 +13,23 @@
 .choose__btn{
   border: none;
   background-color: transparent;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  padding: 17px 0;
+  padding-bottom: 0;
+
+  .bx{
+    margin-right: 6px;
+    font-size: 14px;
+  }
+
+  &.active{
+    color: #262626;
+    border-top: 1px solid #262626;
+  }
 }
 
 .story__list{
@@ -283,11 +294,45 @@
 }
 
 .modal-media-holder{
+  display: flex;
+  position: relative;
+  transition: all 0.3s ease;
+  // overflow-x: hidden;
+
   img{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+
+.everything-holder{
+  position: absolute;
+  height: 100%;
+
+  button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: #fff;
+    z-index: 10000;
+  }
+}
+
+.array-left{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.array-right{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .story__item-holder{
@@ -308,4 +353,21 @@
 .saved-list{
   @include list-style;
   display: none;
+}
+
+.carousel-inner{
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item{
+  width: 100%;
+  height: 100%;
+
+  img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
 }

@@ -47,15 +47,15 @@ let elStories = [
     id : 3,
     media : [
       "../media/typografy.jpg",
-      "https://picsum.photos/id/2/293/293",
-      "https://picsum.photos/id/3/293/293",
-      "https://picsum.photos/id/666/293/293",
-      "https://picsum.photos/id/343/293/293",
-      "https://picsum.photos/id/571/293/293",
-      "https://picsum.photos/id/255/293/293",
-      "https://picsum.photos/id/772/293/293",
-      "https://picsum.photos/id/134/293/293",
-      "https://picsum.photos/id/299/293/293"
+      "../media/typografy-two.jpg",
+      "../media/typografy-three.jpg",
+      "../media/typografy-four.jpg",
+      "../media/typografy-five.jpg",
+      "../media/typografy-six.jpg",
+      "../media/typografy-seven.jpg",
+      "../media/typografy-eight.jpg",
+      "../media/typografy-nine.jpg",
+      "../media/typografy-ten.jpg"
     ],
     title : "Tipografika bo'yicha foydali maslahatlar",
     desc : `Tipografika nima? Grafik dizayn sohasida ishlatiladigan bu so'zni umumiy ma'noda yozuv shriftlari bilan samarali ishlash, deb aytsak bo'ladi. Ya'ni dizaynda mavzuga aloqador shrift turi, o'lchami va joylashuvini to'g'ri tanlash san'atidir.
@@ -85,15 +85,15 @@ let elStories = [
     id : 5,
     media : [
       "../media/muhammadali-eshonqulov.jpg",
-      "https://picsum.photos/id/587/293/293",
-      "https://picsum.photos/id/613/293/293",
-      "https://picsum.photos/id/151/293/293",
-      "https://picsum.photos/id/754/293/293",
-      "https://picsum.photos/id/516/293/293",
-      "https://picsum.photos/id/631/293/293",
-      "https://picsum.photos/id/327/293/293",
-      "https://picsum.photos/id/532/293/293",
-      "https://picsum.photos/id/406/293/293"
+      "../media/muhammadali-eshonqulov-two.jpg",
+      "../media/muhammadali-eshonqulov-three.jpg",
+      "../media/muhammadali-eshonqulov-four.jpg",
+      "../media/muhammadali-eshonqulov-five.jpg",
+      "../media/muhammadali-eshonqulov-six.jpg",
+      "../media/muhammadali-eshonqulov-seven.jpg",
+      "../media/muhammadali-eshonqulov-eight.jpg",
+      "../media/muhammadali-eshonqulov-nine.jpg",
+      "../media/muhammadali-eshonqulov-ten.jpg"
     ],
     title : "Muhammadali Eshonqulov bilan suhbat bo'lib o'tdi",
     desc : `Kuni kecha markazimizning Chilonzor filiali o'quvchilar bilan to'lib-toshdi. Ya'ni hozirda ko'plab yoshlar uchun o'rnak bo'lib kelayotgan inson — Muhammadali Eshonqulov «Najot Ta'lim» markazida mehmon bo'ldi.
