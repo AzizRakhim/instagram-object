@@ -192,11 +192,12 @@ function showIt(elStories, num){
             </div>
           </div>
           <button class="carousel-control-prev carousel-button" type="button" data-bs-target="#carouselExampleControls${b}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"><i class='bx bx-chevron-left'></i></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next carousel-button" type="button" data-bs-target="#carouselExampleControls${b}" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true">
+            <i class='bx bx-chevron-right' ></i></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
