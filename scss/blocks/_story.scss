@@ -371,3 +371,12 @@
     max-height: 100%;
   }
 }
+
+.carousel-button{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(123, 120, 120);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}

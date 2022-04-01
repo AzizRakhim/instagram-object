@@ -1004,4 +1004,14 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
+
+.carousel-button {
+  width: 50px;
+  height: 50px;
+  background-color: #7b7878;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 /*# sourceMappingURL=main.css.map */
